@@ -585,3 +585,19 @@ A task is complete only if:
 - Manual testing completed.
 - Documentation updated.
 - `CHANGELOG.md` updated.
+
+## Completion Requirements
+
+For every completed task, the agent must:
+
+1. Mark the task as completed.
+2. Update CHANGELOG.md.
+3. Explain the implementation summary.
+4. List all files created.
+5. List all files modified.
+6. List any assumptions made.
+7. Report any blockers.
+8. Confirm:
+   - TypeScript passes
+   - ESLint passes
+   - Production build succeeds

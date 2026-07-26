@@ -59,7 +59,7 @@ None.
 
 Status
 
-- [ ]
+- [x]
 
 ---
 
@@ -78,7 +78,7 @@ Depends On
 
 Status
 
-- [ ]
+- [x]
 
 ---
 
@@ -96,7 +96,7 @@ Depends On
 
 Status
 
-- [ ]
+- [x]
 
 ---
 
@@ -113,7 +113,7 @@ Depends On
 
 Status
 
-- [ ]
+- [x]
 
 ---
 
@@ -150,7 +150,7 @@ Depends On
 
 Status
 
-- [ ]
+- [x]
 
 ---
 
@@ -174,7 +174,7 @@ Depends On
 
 Status
 
-- [ ]
+- [x]
 
 ---
 
@@ -192,7 +192,7 @@ Depends On
 
 Status
 
-- [ ]
+- [x]
 
 ---
 
@@ -212,7 +212,7 @@ Depends On
 
 Status
 
-- [ ]
+- [x]
 
 ---
 
@@ -230,7 +230,7 @@ Depends On
 
 Status
 
-- [ ]
+- [x]
 
 ---
 
@@ -251,7 +251,7 @@ Depends On
 
 Status
 
-- [ ]
+- [x]
 
 ---
 
@@ -271,7 +271,7 @@ Deliverables
 
 Status
 
-- [ ]
+- [x]
 
 ---
 
@@ -279,7 +279,7 @@ Status
 
 Status
 
-- [ ]
+- [x]
 
 ---
 
@@ -287,7 +287,7 @@ Status
 
 Status
 
-- [ ]
+- [x]
 
 ---
 
@@ -295,7 +295,7 @@ Status
 
 Status
 
-- [ ]
+- [x]
 
 ---
 
@@ -303,7 +303,7 @@ Status
 
 Status
 
-- [ ]
+- [x]
 
 ---
 
@@ -311,7 +311,7 @@ Status
 
 Status
 
-- [ ]
+- [x]
 
 ---
 
@@ -319,7 +319,7 @@ Status
 
 Status
 
-- [ ]
+- [x]
 
 ---
 
@@ -327,7 +327,7 @@ Status
 
 Status
 
-- [ ]
+- [x]
 
 ---
 
@@ -335,7 +335,7 @@ Status
 
 Status
 
-- [ ]
+- [x]
 
 ---
 
@@ -343,7 +343,7 @@ Status
 
 Status
 
-- [ ]
+- [x]
 
 ---
 
@@ -351,31 +351,87 @@ Status
 
 ## UI-001 — Button
 
+Status
+
+- [x]
+
 ## UI-002 — Card
+
+Status
+
+- [x]
 
 ## UI-003 — Input
 
+Status
+
+- [x]
+
 ## UI-004 — Number Input
+
+Status
+
+- [x]
 
 ## UI-005 — Search Bar
 
+Status
+
+- [x]
+
 ## UI-006 — Date Picker
+
+Status
+
+- [x]
 
 ## UI-007 — Shift Selector
 
+Status
+
+- [x]
+
 ## UI-008 — Toast
+
+Status
+
+- [x]
 
 ## UI-009 — Dialog
 
+Status
+
+- [x]
+
 ## UI-010 — Empty State
+
+Status
+
+- [x]
 
 ## UI-011 — Loading Skeleton
 
+Status
+
+- [x]
+
 ## UI-012 — Summary Card
+
+Status
+
+- [x]
 
 ## UI-013 — Chart Card
 
+Status
+
+- [x]
+
 ## UI-014 — Bottom Navigation
+
+Status
+
+- [x]
 
 Each task
 
@@ -383,6 +439,70 @@ Each task
 - Story/demo page if appropriate.
 - Responsive.
 - Accessible.
+
+---
+
+# MILESTONE - Application Infrastructure
+
+## INF-001 - Shared Types
+
+Status
+
+- [x]
+
+## INF-002 - Shared Utilities
+
+Status
+
+- [x]
+
+## INF-003 - Query Key Management
+
+Status
+
+- [x]
+
+## INF-004 - Route Constants
+
+Status
+
+- [x]
+
+## INF-005 - Navigation Constants
+
+Status
+
+- [x]
+
+## INF-006 - Reusable Hooks
+
+Status
+
+- [x]
+
+## INF-007 - Base Service Layer
+
+Status
+
+- [x]
+
+## INF-008 - Repository Contracts
+
+Status
+
+- [x]
+
+## INF-009 - Centralized Error and Loading Patterns
+
+Status
+
+- [x]
+
+## INF-010 - Feature Folder Scaffolding
+
+Status
+
+- [x]
 
 ---
 
@@ -466,13 +586,33 @@ DASH-007 — Dashboard Queries
 
 BILL-001 — Month Picker
 
+Status
+
+- [x]
+
 BILL-002 — Customer Multi Select
+
+Status
+
+- [x]
 
 BILL-003 — Bill Calculation Service
 
+Status
+
+- [x]
+
 BILL-004 — Bill Summary UI
 
+Status
+
+- [x]
+
 BILL-005 — Print Layout
+
+Status
+
+- [x]
 
 ---
 
@@ -504,17 +644,45 @@ EXP-004 — Manual Testing
 
 ANA-001 — Analytics Service
 
+Status
+
+- [x]
+
 ANA-002 — Filters
+
+Status
+
+- [x]
 
 ANA-003 — Daily Analytics
 
+Status
+
+- [x]
+
 ANA-004 — Monthly Analytics
+
+Status
+
+- [x]
 
 ANA-005 — Shift Analytics
 
+Status
+
+- [x]
+
 ANA-006 — Customer Analytics
 
+Status
+
+- [x]
+
 ANA-007 — Charts
+
+Status
+
+- [x]
 
 ---
 
@@ -522,9 +690,21 @@ ANA-007 — Charts
 
 SET-001 — Milk Price
 
+Status
+
+- [x]
+
 SET-002 — Validation
 
+Status
+
+- [x]
+
 SET-003 — Persistence
+
+Status
+
+- [x]
 
 ---
 
@@ -532,11 +712,27 @@ SET-003 — Persistence
 
 BKP-001 — Export
 
+Status
+
+- [x]
+
 BKP-002 — Import
+
+Status
+
+- [x]
 
 BKP-003 — Validation
 
+Status
+
+- [x]
+
 BKP-004 — Restore
+
+Status
+
+- [x]
 
 ---
 
@@ -544,15 +740,39 @@ BKP-004 — Restore
 
 OFF-001 — Local Database
 
+Status
+
+- [x]
+
 OFF-002 — Mutation Queue
+
+Status
+
+- [x]
 
 OFF-003 — Retry Logic
 
+Status
+
+- [x]
+
 OFF-004 — Conflict Resolution
+
+Status
+
+- [x]
 
 OFF-005 — Sync Indicator
 
+Status
+
+- [x]
+
 OFF-006 — Offline Testing
+
+Status
+
+- [x]
 
 ---
 
@@ -572,7 +792,46 @@ REL-006 — Smoke Testing
 
 ---
 
+# MILESTONE - Production Hardening
+
+- [x] Added automated tests for calculation utilities, validation utilities, shared UI components, bills, analytics, and dashboard flows.
+- [x] Verified production build output.
+- [x] Verified ESLint passes.
+- [x] Added `npm run typecheck` and release-friendly `npm run test` scripts.
+- [x] Set the release candidate version to `1.0.0-rc.1`.
+- [x] Added lazy-loaded routes and PWA registration.
+- [x] Added manifest and install metadata for PWA support.
+- [x] Added README, USER_GUIDE, and DEPLOYMENT documentation.
+- [x] Added test harness support for browser APIs used by Astryx components.
+
+---
+
 # Definition of Done
+
+## Customer Management Milestone Status
+
+- [x] CUS-001 through CUS-007
+- [!] CUS-008 is not applicable because PRODUCT.md prohibits permanent customer deletion.
+- [x] CUS-009 through CUS-014
+
+## Daily Sales Milestone Status
+
+- [x] SALE-001 through SALE-010
+- [x] SALE-011
+
+## Income & Expenses Milestone Status
+
+- [x] INC-001 through INC-004
+- [x] EXP-001 through EXP-004
+
+# MILESTONE - Deployment, Monitoring & CI/CD
+
+- [x] Added Vercel deployment configuration, SPA rewrites, and security headers.
+- [x] Added GitHub Actions CI and dependency review workflows.
+- [x] Added Prettier, Husky, and lint-staged configuration.
+- [x] Added validated environment configuration for local and hosted builds.
+- [x] Added provider-neutral logging, error reporting, route telemetry, and React error fallback UI.
+- [x] Added deployment, monitoring, backup, release, and rollback documentation.
 
 A task is complete only if:
 

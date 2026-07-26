@@ -1,10 +1,29 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
+import { BrowserRouter } from 'react-router-dom'
+import { Providers } from './app/providers'
+import App from './App'
 import './index.css'
-import App from './App.tsx'
+import { registerSW } from 'virtual:pwa-register'
+import { AppErrorBoundary } from './components/system/AppErrorBoundary'
+import { initializeMonitoring } from './lib/monitoring'
+
+registerSW({
+  immediate: true,
+  onNeedRefresh() {
+    window.location.reload()
+  },
+})
+initializeMonitoring()
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <App />
+    <AppErrorBoundary>
+      <Providers>
+        <BrowserRouter>
+          <App />
+        </BrowserRouter>
+      </Providers>
+    </AppErrorBoundary>
   </StrictMode>,
 )

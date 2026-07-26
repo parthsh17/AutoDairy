@@ -1,75 +1,59 @@
-# React + TypeScript + Vite
+# AutoDairy
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+AutoDairy is a mobile-first dairy operations app for customer management, daily sales, monthly bills, analytics, backup and restore, and offline sync.
 
-Currently, two official plugins are available:
+Current release candidate: `1.0.0-rc.1`
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Stack
 
-## React Compiler
+- React 19
+- TypeScript
+- Vite
+- TanStack Query
+- Supabase
+- Dexie
+- Recharts
+- Astryx components
+- Lexend font
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Getting Started
 
-## Expanding the ESLint configuration
+1. Install dependencies with `npm install`.
+2. Start the app with `npm run dev`.
+3. Open the local Vite URL in your browser.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Verification
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- `npm run lint`
+- `npm run typecheck`
+- `npm run test:run`
+- `npm run build`
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## Deployment
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+See [docs/08_deployment.md](docs/08_deployment.md) for Vercel configuration, GitHub Actions, monitoring, backups, release checks, and rollback guidance. Copy `.env.example` to `.env.local` for development; production variables are configured in Vercel.
 
-```
+## Release Summary
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+- Dynamic bills and analytics
+- Settings with historical milk-price preservation
+- JSON backup and restore
+- Offline sync with local queuing
+- PWA install support
+- Production hardening tests and release docs
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## Features
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+- Customer management with membership history
+- Daily milk entry with historical price tracking
+- Monthly bills with print-friendly layout and PDF export
+- Live analytics for sales, revenue, costs, and profit
+- Settings for global milk price
+- Backup and restore through JSON export/import
+- Offline sync with local queueing and status indicators
+- PWA install support
 
-```
+## Notes
+
+- Historical milk prices are stored per daily shift and are not overwritten by later settings changes.
+- Calculated bills and analytics are generated dynamically and are never stored in the database.

@@ -1,5 +1,3 @@
-import { Toast as AstryxToast } from '@astryxdesign/core/Toast'
-
 interface ToastProps {
   title: string
   message?: string
@@ -7,6 +5,11 @@ interface ToastProps {
 
 export function Toast({ title, message }: ToastProps) {
   return (
-    <AstryxToast type="info" body={message ?? title} isAutoHide autoHideDuration={3000} onDismiss={() => undefined} />
+    <div className="pointer-events-auto flex w-full max-w-sm items-start gap-4 rounded-lg border bg-background p-4 shadow-lg">
+      <div className="flex-1 grid gap-0.5">
+        <p className="text-sm font-semibold">{title}</p>
+        {message && <p className="text-sm text-muted-foreground">{message}</p>}
+      </div>
+    </div>
   )
 }

@@ -50,6 +50,10 @@ async function flushQueue() {
   }
 }
 
+export async function syncPendingOperations() {
+  await flushQueue()
+}
+
 export function useSyncStatus(): SyncStatusState {
   const lastSyncAtRef = useRef<string | null>(null)
   const [state, setState] = useState<SyncStatusState>({

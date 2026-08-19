@@ -54,6 +54,8 @@ export class CustomerService {
       })
     }
 
+    // The database requires end_date to be on or after start_date. The
+    // active-state calculation treats this date as the pause boundary.
     return this.repository.updateMembership(membership.id, { end_date: selectedDate })
   }
 

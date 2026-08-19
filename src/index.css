@@ -1,32 +1,26 @@
-@layer reset, theme, base, astryx-base, astryx-theme, components, utilities;
-
-@import '@astryxdesign/core/reset.css';
-@import '@astryxdesign/core/astryx.css';
-@import '@astryxdesign/theme-neutral/theme.css';
-@import '@astryxdesign/core/tailwind-theme.css';
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
-  --background: 40 33% 98%;
+  --background: 36 33% 98%;
   --foreground: 222 47% 11%;
   --card: 0 0% 100%;
   --card-foreground: 222 47% 11%;
   --popover: 0 0% 100%;
   --popover-foreground: 222 47% 11%;
-  --primary: 158 64% 29%;
+  --primary: 160 84% 39%;
   --primary-foreground: 0 0% 100%;
-  --secondary: 215 20% 96%;
-  --secondary-foreground: 222 47% 11%;
+  --secondary: 217 91% 60%;
+  --secondary-foreground: 0 0% 100%;
   --muted: 215 20% 96%;
   --muted-foreground: 215 16% 47%;
   --accent: 151 81% 94%;
   --accent-foreground: 158 64% 20%;
   --destructive: 0 84% 60%;
   --destructive-foreground: 0 0% 100%;
-  --border: 214 32% 91%;
-  --input: 214 32% 91%;
+  --border: 214 24% 83%;
+  --input: 214 24% 79%;
   --ring: 158 64% 29%;
   --radius: 1rem;
 }
@@ -44,7 +38,17 @@ html {
 body {
   margin: 0;
   min-width: 320px;
-  background: radial-gradient(circle at top, rgba(16, 185, 129, 0.12), transparent 42%), hsl(var(--background));
+  background: radial-gradient(circle at top, rgba(16, 185, 129, 0.1), transparent 42%), hsl(var(--background));
+}
+
+/* Keep interactive controls legible even when a component does not provide a
+   bespoke border class. */
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: 2px solid hsl(var(--ring));
+  outline-offset: 2px;
 }
 
 a {

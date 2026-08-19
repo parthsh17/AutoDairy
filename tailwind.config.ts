@@ -37,12 +37,18 @@ export default {
         },
       },
       borderRadius: {
-        lg: 'var(--radius)',
-        md: 'calc(var(--radius) - 2px)',
-        sm: 'calc(var(--radius) - 4px)',
+        sm: '8px',
+        md: '12px',
+        lg: '16px',
+        card: '20px',
+        button: '14px',
       },
       fontFamily: {
         sans: ['Lexend', 'sans-serif'],
+      },
+      boxShadow: {
+        card: '0 1px 2px hsl(222 47% 11% / 0.04)',
+        nav: '0 -1px 2px hsl(222 47% 11% / 0.04)',
       },
     },
   },

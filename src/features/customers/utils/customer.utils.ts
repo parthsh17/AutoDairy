@@ -2,7 +2,7 @@ import type { ISODateString } from '@/types/common.types'
 import type { CustomerRecord, CustomerShift, CustomerViewModel, MembershipRecord } from '../types/customer.types'
 
 export function isMembershipActive(membership: MembershipRecord, selectedDate: ISODateString) {
-  return membership.start_date <= selectedDate && (membership.end_date === null || membership.end_date >= selectedDate)
+  return membership.start_date <= selectedDate && (membership.end_date === null || membership.end_date > selectedDate)
 }
 
 export function isCustomerActive(customer: CustomerRecord, selectedDate: ISODateString) {

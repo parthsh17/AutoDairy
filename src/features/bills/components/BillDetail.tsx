@@ -1,4 +1,3 @@
-import { MetadataList, MetadataListItem } from '@astryxdesign/core/MetadataList'
 import { Card } from '@/components/ui/Card'
 import { Button } from '@/components/ui/Button'
 import { SectionHeader } from '@/components/ui/SectionHeader'
@@ -20,7 +19,7 @@ export function BillDetail({ row, billingMonth, billingYear, onPrint }: BillDeta
       : 'No sales recorded'
 
   return (
-    <Card className="grid gap-4">
+    <Card className="grid gap-4 p-4">
       <SectionHeader
         title={row.customerName}
         description={row.phone ? row.phone : 'No phone number recorded'}
@@ -30,14 +29,21 @@ export function BillDetail({ row, billingMonth, billingYear, onPrint }: BillDeta
           </Button>
         }
       />
-      <MetadataList columns={2}>
-        <MetadataListItem label="Billing period">{getBillingPeriodLabel(billingMonth, billingYear)}</MetadataListItem>
-        <MetadataListItem label="Morning total">{formatBillLitreValue(row.morningQuantity)}</MetadataListItem>
-        <MetadataListItem label="Evening total">{formatBillLitreValue(row.eveningQuantity)}</MetadataListItem>
-        <MetadataListItem label="Overall quantity">{formatBillLitreValue(row.totalQuantity)}</MetadataListItem>
-        <MetadataListItem label="Milk price used">{milkPriceLabel}</MetadataListItem>
-        <MetadataListItem label="Amount payable">{formatAmount(row.totalAmount)}</MetadataListItem>
-      </MetadataList>
+      <dl className="grid grid-cols-2 gap-x-4 gap-y-3">
+        {[
+          { label: 'Billing period', value: getBillingPeriodLabel(billingMonth, billingYear) },
+          { label: 'Morning total', value: formatBillLitreValue(row.morningQuantity) },
+          { label: 'Evening total', value: formatBillLitreValue(row.eveningQuantity) },
+          { label: 'Overall quantity', value: formatBillLitreValue(row.totalQuantity) },
+          { label: 'Milk price used', value: milkPriceLabel },
+          { label: 'Amount payable', value: formatAmount(row.totalAmount) },
+        ].map(({ label, value }) => (
+          <div key={label} className="grid gap-0.5">
+            <dt className="text-xs text-muted-foreground">{label}</dt>
+            <dd className="text-sm font-medium">{value}</dd>
+          </div>
+        ))}
+      </dl>
       <div className="grid gap-4">
         <section className="grid gap-3">
           <h3 className="text-base font-semibold">Daily quantity breakdown</h3>

@@ -5,7 +5,7 @@ import { PageContainer } from '../components/layout/PageContainer'
 
 export function AppShell() {
   return (
-    <div className="min-h-dvh bg-background text-foreground">
+    <div className="flex min-h-dvh flex-col bg-background text-foreground">
       <AppHeader title="AutoDairy" subtitle="Shared UI system" />
       <PageContainer>
         <Outlet />

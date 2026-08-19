@@ -9,7 +9,9 @@ import '@fontsource/lexend/700.css'
 import './index.css'
 import { registerSW } from 'virtual:pwa-register'
 import { AppErrorBoundary } from './components/system/AppErrorBoundary'
+import { ConfigurationError } from './components/system/ConfigurationError'
 import { initializeMonitoring } from './lib/monitoring'
+import { publicEnv } from './lib/env'
 
 registerSW({
   immediate: true,
@@ -21,12 +23,16 @@ initializeMonitoring()
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <AppErrorBoundary>
-      <Providers>
-        <BrowserRouter>
-          <App />
-        </BrowserRouter>
-      </Providers>
-    </AppErrorBoundary>
+    {publicEnv.configurationError ? (
+      <ConfigurationError message={publicEnv.configurationError} />
+    ) : (
+      <AppErrorBoundary>
+        <Providers>
+          <BrowserRouter>
+            <App />
+          </BrowserRouter>
+        </Providers>
+      </AppErrorBoundary>
+    )}
   </StrictMode>,
 )
